@@ -1,0 +1,4 @@
+class Red{
+    nombre = "nombre"
+    
+}

@@ -1,18 +1,21 @@
 import { Bicicleta } from "./Bicicleta.js";
 import { Tarjeta } from "./Tarjeta.js";
+import { ContenedorTarjetas } from "./ControladorTarjetas.js";
+import { listaBicis } from "./listaBicis.js";
 
 
 //const Tarjeta = require("./Tarjeta.js");
 
 //const Bicicleta = require("./NombreDelaClase");
 
-const Bici1 = new Bicicleta("Raleigh", "Mountain bike rodado 30", "https://http2.mlstatic.com/D_NQ_NP_2X_859511-MLA49423989589_032022-F.webp");
 
-const Bici2 = new Bicicleta("Fire Bird", "Freno a disco rodado 29", "https://http2.mlstatic.com/D_NQ_NP_2X_866218-MLA51001739312_082022-F.webp");
 
-const Bici3 = new Bicicleta("Aerolite", "Fixie rodado 28", "https://http2.mlstatic.com/D_NQ_NP_2X_933303-MLA47283848110_082021-F.webp");
+const unContenedorTarjetas = new ContenedorTarjetas("#contenedor-cards");
 
-const Tarjeta1 = new Tarjeta(
+unContenedorTarjetas.agregarTarjetasALaAppCon(listaBicis);
+
+
+/*const Tarjeta1 = new Tarjeta(
     Bici1.getMarca(),
     Bici1.getDescripcion(),
     Bici1.getImagen(),
@@ -46,3 +49,4 @@ document.querySelector("#contenedor-cards").innerHTML =`
         </div>
     </div>
 `;
+*/
