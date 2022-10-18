@@ -20,6 +20,5 @@ class Bicicleta {
     }
 }
 
-
 //module.export = Bicicleta;
 export {Bicicleta};

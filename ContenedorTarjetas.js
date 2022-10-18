@@ -4,10 +4,16 @@ class ContenedorTarjetas{
     #idContenedor = "def id";
     #tarjetas = [];
 
+    /**
+     * Inicializa un objeto ContenedorTarjeta
+     * @param {String} idContenedor en la pagina
+     */
     constructor(idContenedor){
         this.#idContenedor = idContenedor;
     }
-   
+    /* setIdContenedor(idContenedor){ 
+        this.#idContenedor = idContenedor;
+    } */
 
     /**
      * Agrega las tarjetas a la app con la lista contenido
@@ -15,13 +21,13 @@ class ContenedorTarjetas{
      */
     agregarTarjetasALaAppCon(listaContenido){ 
         this.agregarInfoALasTarjetas(listaContenido);
-        this.mostrarTarjetas();
+        this.#mostrarTarjetas();
     }
 
     /**
      * Insertar el html necesario para las tarjetas
      */
-    mostrarTarjetas(){ 
+    #mostrarTarjetas(){ 
         document.querySelector(this.#idContenedor).innerHTML =`
             <div class="row">
                 ${this.generadorTarjetasHtml()}
@@ -51,16 +57,21 @@ class ContenedorTarjetas{
      * @param {Array} listaContenido para las Tarjetas 
      */
     agregarInfoALasTarjetas(listaContenido){ 
+        //alert("esto es un comportamiento abstracto - ")
         for (let i = 0; i < listaContenido.length; i++) {
             this.#tarjetas.push(
-                new Tarjeta(
-                    listaContenido[i].getMarca(),
-                    listaContenido[i].getDescripcion(),
-                    listaContenido[i].getImagen(),
-                    "Comprar"
-                )
+                this.crearTarjetaCon(listaContenido[i])
             );        
         }
+        
+    }
+
+    /**
+     * Construye una tarjeta con la info recibida
+     * @param {Object} info para construir la tarjeta
+     */
+    crearTarjetaCon(info){
+        alert("creacion de tarjeta fallo - comportamiento abstracto");
     }
  }
 
