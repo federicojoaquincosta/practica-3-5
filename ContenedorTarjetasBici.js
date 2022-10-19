@@ -4,18 +4,6 @@ import { Tarjeta } from "./Tarjeta.js";
 
 class ContenedorTarjetasBici extends ContenedorTarjetas{ 
 
-    // sobreescritura
-    /* agregarInfoALasTarjetas(listaContenido){
-        for (let i = 0; i < listaContenido.length; i++) {
-            this._tarjetas.push(
-                new Tarjeta(
-                    listaContenido[i].getNombre(),
-                    listaContenido[i].getTipoPreparacion(),// .getTipoPreparacion();
-                    listaContenido[i].getFoto()
-                )
-            );        
-        }
-    } */
 
     /**
      * Construye una tarjeta con bicicleta
@@ -26,7 +14,8 @@ class ContenedorTarjetasBici extends ContenedorTarjetas{
         return new Tarjeta(
             info.getMarca(),
             info.getDescripcion(),
-            info.getImagen()
+            info.getImagen(),
+            info.getBoton()
         )
     }
 }

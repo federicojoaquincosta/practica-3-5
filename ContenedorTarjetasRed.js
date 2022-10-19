@@ -14,7 +14,8 @@ class ContenedorTarjetasRed extends ContenedorTarjetas{
         return new Tarjeta(
             info.getNombre(),
             info.getDescripcion(),
-            info.getImagen()
+            info.getImagen(),
+            info.getBoton()
         )
     }
 }

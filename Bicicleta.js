@@ -2,11 +2,13 @@ class Bicicleta {
     #marca;
     #descripcion;
     #imagen;
+    #nombreBoton;
 
-    constructor(marca, descripcion, imagen){
+    constructor(marca, descripcion, imagen, nombreBoton){
         this.#marca = marca;
         this.#descripcion = descripcion;
         this.#imagen = imagen;
+        this.#nombreBoton = nombreBoton;
     }
 
     getMarca(){
@@ -17,6 +19,10 @@ class Bicicleta {
     }
     getImagen(){
         return this.#imagen;
+    }
+
+    getBoton(){
+        return this.#nombreBoton;
     }
 }
 

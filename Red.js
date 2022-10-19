@@ -2,13 +2,14 @@ class Red {
     #nombre;
     #descripcion;
     #imagen;
-    #boton;
+    #nombreBoton;
 
 
-    constructor(nombre, descripcion, imagen){
+    constructor(nombre, descripcion, imagen, nombreBoton){
         this.#nombre = nombre;
         this.#descripcion = descripcion;
         this.#imagen = imagen;
+        this.#nombreBoton = nombreBoton;
     }
 
     getNombre(){
@@ -21,6 +22,10 @@ class Red {
     
     getImagen(){
         return this.#imagen;
+    }
+
+    getBoton(){
+        return this.#nombreBoton;
     }
 }
 
