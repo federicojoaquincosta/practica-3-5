@@ -1,6 +1,7 @@
-import { ContenedorTarjetas } from "./ContenedorTarjetas.js";
-import { Red } from "./Red.js";
-import { Tarjeta } from "./Tarjeta.js";
+import { ContenedorTarjetas } from "../superclases/ContenedorTarjetas.js";
+import { Red } from "../superclases/Red.js";
+import { Tarjeta } from "../superclases/Tarjeta.js";
+import { TarjetaRed } from "./TarjetaRed.js";
 
 class ContenedorTarjetasRed extends ContenedorTarjetas{ 
 
@@ -11,7 +12,7 @@ class ContenedorTarjetasRed extends ContenedorTarjetas{
      * @returns tarjeta construida con la info
      */
     crearTarjetaCon(info){
-        return new Tarjeta(
+        return new TarjetaRed (
             info.getNombre(),
             info.getDescripcion(),
             info.getImagen(),

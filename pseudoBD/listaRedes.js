@@ -1,4 +1,4 @@
-import { Red } from "./Red.js";
+import { Red } from "../modelos/superclases/Red.js";
 
 let listaRedes = [
     new Red(
@@ -18,4 +18,4 @@ let listaRedes = [
         "Suscribirse")
 ]
 
-export { listaRedes };
+export {listaRedes};

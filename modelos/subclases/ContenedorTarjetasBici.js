@@ -1,6 +1,7 @@
-import { ContenedorTarjetas } from "./ContenedorTarjetas.js";
-import { Bicicleta } from "./Bicicleta.js";
-import { Tarjeta } from "./Tarjeta.js";
+import { ContenedorTarjetas } from "../superclases/ContenedorTarjetas.js";
+import { Bicicleta } from "../superclases/Bicicleta.js";
+import { TarjetaBici } from "./TarjetaBici.js";
+
 
 class ContenedorTarjetasBici extends ContenedorTarjetas{ 
 
@@ -11,11 +12,12 @@ class ContenedorTarjetasBici extends ContenedorTarjetas{
      * @returns tarjeta construida con la info
      */
     crearTarjetaCon(info){
-        return new Tarjeta(
+        return new TarjetaBici(
             info.getMarca(),
             info.getDescripcion(),
             info.getImagen(),
-            info.getBoton()
+            info.getBoton(),
+            info.getPrecio()
         )
     }
 }
